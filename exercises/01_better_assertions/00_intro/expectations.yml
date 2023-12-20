@@ -1,0 +1,9 @@
+tests:
+  - name: "assertion_with_message"
+    expected_outcome: "failure"
+    expected_output: |
+      thread 'tests::assertion_with_message' panicked at exercises/01_better_assertions/00_intro/src/main.rs:7:9:
+      assertion `left == right` failed: TODO
+        left: 5
+       right: 6
+      note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
