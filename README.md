@@ -19,6 +19,7 @@ If you run into any issue with the assumed level of Rust knowledge, please ping 
 - **Rust** (follow instructions [here](https://www.rust-lang.org/tools/install)).  
   If Rust is already installed on your system, make sure you are running on the latest compiler version (`cargo --version`).  
   If not, update using `rustup update` (or another appropriate command depending on how you installed Rust on your system).
+  You **must** have `rustup` installed (check with `rustup --version`). 
 - _(Optional)_ An IDE with Rust autocompletion support.
   We recommend one of the following:
     - [RustRover](https://www.jetbrains.com/rust/);

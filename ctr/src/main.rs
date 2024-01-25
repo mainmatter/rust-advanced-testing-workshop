@@ -138,14 +138,20 @@ fn run_tests() -> Result<HashMap<String, TestOutcome>, anyhow::Error> {
         regex::Regex::new(r#"thread \'[a-zA-Z0-9\:\-\_]+\' panicked at [a-zA-Z0-9\-\_\/\.]+\:(?<row>\d+)\:(?<column>\d+)"#)
             .expect("Failed to compile regex")
     });
+    static MISSING_NIGHTLY: Lazy<regex::Regex> = Lazy::new(|| {
+        regex::Regex::new(r#"error: toolchain 'nightly-[a-zA-Z0-9\-]+' is not installed"#)
+            .expect("Failed to compile regex")
+    });
     static GOOGLETEST_PANIC: Lazy<regex::Regex> = Lazy::new(|| {
         regex::Regex::new(r#"\s*at [a-zA-Z0-9\-\_\/\.]+\:(?<row>\d+)\:(?<column>\d+)"#)
             .expect("Failed to compile regex")
     });
 
-    let mut command = std::process::Command::new("cargo");
+    let mut command = std::process::Command::new("rustup");
     command
-        .arg("+nightly")
+        .arg("run")
+        .arg("nightly")
+        .arg("cargo")
         .arg("test")
         .arg("--quiet")
         .arg("--no-fail-fast")
@@ -154,8 +160,16 @@ fn run_tests() -> Result<HashMap<String, TestOutcome>, anyhow::Error> {
         .arg("unstable-options")
         .arg("--format")
         .arg("json");
-    let raw_output = command.output().context("Failed to run `cargo test`")?;
+    let raw_output = command
+        .output()
+        .context("Failed to run `rustup run nightly cargo test`")?;
     let stdout = String::from_utf8(raw_output.stdout).context("stdout contains invalid UTF-8")?;
+    let stderr = String::from_utf8(raw_output.stderr).context("stdout contains invalid UTF-8")?;
+    if MISSING_NIGHTLY.is_match(&stderr) {
+        anyhow::bail!(
+            "You need to install the nightly toolchain: `rustup toolchain install nightly`"
+        )
+    }
     let mut test_outcomes = HashMap::new();
     for line in stdout.lines() {
         let Ok(libtest_msg) = serde_json::from_str::<serde_json::Value>(line) else {
