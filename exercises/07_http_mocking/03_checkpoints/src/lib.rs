@@ -71,7 +71,6 @@ mod tests {
             )
             .await;
 
-        let client = reqwest::Client::new();
         let base_url = Url::parse(&server.uri()).unwrap();
 
         let repository = super::Repository::new(base_url.clone(), caller_id).await;
