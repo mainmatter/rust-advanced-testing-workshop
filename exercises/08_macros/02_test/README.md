@@ -15,7 +15,7 @@ This is how `#[googletest::test]` works, for example.
 ## The toolkit
 
 When the macro game is serious, you can't get by using the built-in `proc_macro` crate.  
-Almost all macros written in Rust ar~~~~e built on top of three ecosystem crates:
+Almost all macros written in Rust are built on top of three ecosystem crates:
 
 - [`syn`](https://docs.rs/syn/) for parsing tokens into abstract syntax tree nodes (AST node)
 - [`quote`](https://docs.rs/quote/) for expressing the generated code with a `println!`-style syntax
