@@ -17,7 +17,7 @@ pub fn test(args: TokenStream, input: TokenStream) -> TokenStream {
     } = test_fn;
     let mut output = todo!("Use quote");
 
-    if attrs.iter().any(|a| is_test_attribute(a)) {
+    if !attrs.iter().any(|a| is_test_attribute(a)) {
         output = {
             quote! {
                 #[::core::prelude::v1::test]
