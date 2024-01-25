@@ -22,4 +22,10 @@ mod tests {
         let x = MyCustomEnum::B(10);
         assert!(matches!(x, MyCustomEnum::C { .. }));
     }
+
+    #[googletest::test]
+    fn failed_is_c_with_value() {
+        let x = MyCustomEnum::B(10);
+        assert!(matches!(x, MyCustomEnum::C { a: "hello" }));
+    }
 }
