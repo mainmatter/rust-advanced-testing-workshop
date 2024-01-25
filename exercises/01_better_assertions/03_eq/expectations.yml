@@ -2,28 +2,28 @@ tests:
   - name: "failed_eq"
     expected_outcome: "failure"
     expected_output: |-
-      Value of: 1
+      Value of: x
       Expected: is equal to 2
       Actual: 1,
         which isn't equal to 2
   - name: "failed_neq"
     expected_outcome: "failure"
     expected_output: |-
-      Value of: 1
+      Value of: x
       Expected: isn't equal to 1
       Actual: 1,
         which is equal to 1
   - name: "failed_greater_than"
     expected_outcome: "failure"
     expected_output: |-
-      Value of: 3
+      Value of: x
       Expected: is greater than 4
       Actual: 3,
         which is less than or equal to 4
   - name: "failed_less_than"
     expected_outcome: "failure"
     expected_output: |-
-      Value of: 10
+      Value of: x
       Expected: is less than -1
       Actual: 10,
         which is greater than or equal to -1
