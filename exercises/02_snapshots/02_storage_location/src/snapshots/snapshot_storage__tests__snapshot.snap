@@ -2,4 +2,4 @@
 source: exercises/02_snapshots/02_storage_location/src/lib.rs
 expression: m
 ---
-The old snapshot I want to compare against
+The new value I want to save
