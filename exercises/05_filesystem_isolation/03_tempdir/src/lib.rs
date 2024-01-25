@@ -34,8 +34,8 @@ mod tests {
     #[googletest::gtest]
     fn happy_path() {
         // Arrange
-        let workspace_root = todo!();
-        let workspace_root_path = todo!();
+        let workspace_root = TempDir::new().unwrap();
+        let workspace_root_path = workspace_root.path();
 
         let workspace_manifest: Manifest<(), ()> = Manifest {
             workspace: Some(Workspace {
@@ -64,10 +64,14 @@ mod tests {
     }
 
     fn save_member_manifest(m: Manifest<(), ()>, workspace_root: &Path) {
-        todo!()
+        let contents = toml::to_string_pretty(&m).unwrap();
+        let member_root = workspace_root.join(m.package.unwrap().name);
+        std::fs::create_dir_all(&member_root).unwrap();
+        std::fs::write(member_root.join("Cargo.toml"), contents).unwrap();
     }
 
     fn save_workspace_manifest(m: Manifest<(), ()>, workspace_root: &Path) {
-        todo!()
+        let contents = toml::to_string_pretty(&m).unwrap();
+        std::fs::write(workspace_root.join("Cargo.toml"), contents).unwrap();
     }
 }
