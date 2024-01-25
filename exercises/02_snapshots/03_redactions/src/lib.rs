@@ -22,7 +22,7 @@ mod tests {
             }
         });
         assert_json_snapshot!(api_response, {
-            // TODO: Your redaction goes here!
+            ".created_at" => "[timestamp]"
         })
     }
 }
