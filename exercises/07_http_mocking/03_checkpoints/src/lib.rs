@@ -50,6 +50,7 @@ impl Repository {
 
 #[cfg(test)]
 mod tests {
+    use crate::Repository;
     use googletest::assert_that;
     use googletest::matchers::eq;
     use googletest::prelude::err;
@@ -63,25 +64,15 @@ mod tests {
         // Arrange
         let server = MockServer::start().await;
         let caller_id = 1;
-        let expected_path = format!("/auth/{caller_id}");
+        let repository = setup_repository(&server, caller_id).await;
+
         server
             .register(
                 Mock::given(method("GET"))
-                    .and(path(&expected_path))
-                    .respond_with(ResponseTemplate::new(200)),
-            )
-            .await;
-        server
-            .register(
-                Mock::given(method("GET"))
-                    .and(path(&expected_path))
+                    .and(path(&format!("/auth/{caller_id}")))
                     .respond_with(ResponseTemplate::new(403)),
             )
             .await;
-
-        let base_url = Url::parse(&server.uri()).unwrap();
-
-        let repository = super::Repository::new(base_url.clone(), caller_id).await;
 
         // Act
         let outcome = repository.get(2).await;
@@ -91,5 +82,17 @@ mod tests {
             outcome,
             err(eq("Caller no longer has permissions to use a repository"))
         );
+    }
+
+    async fn setup_repository(mock_server: &MockServer, caller_id: usize) -> Repository {
+        let base_url = Url::parse(&mock_server.uri()).unwrap();
+        let _guard = mock_server
+            .register_as_scoped(
+                Mock::given(method("GET"))
+                    .and(path(&format!("/auth/{caller_id}")))
+                    .respond_with(ResponseTemplate::new(200)),
+            )
+            .await;
+        Repository::new(base_url.clone(), caller_id).await
     }
 }
