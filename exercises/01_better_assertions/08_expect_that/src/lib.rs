@@ -37,6 +37,7 @@ mod tests {
         // TODO: if any of the assertions above fails, we want to abort the test
         //   and return an error.
         //   Do it without changing the assertions above!
+        //   Tip: search for a verification function in googletest's docs.
 
         expect_that!(v, empty());
         Ok(())
