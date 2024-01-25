@@ -24,7 +24,7 @@ mod tests {
             age: 16,
         };
 
-        // Check that name and surname are not empty and that age is greater than 18.
+        // Check that name and surname are not empty and that age is greater or equal than 18.
     }
 
     #[googletest::test]
