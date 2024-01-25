@@ -7,3 +7,4 @@ edition = "2021"
 tokio = { workspace = true }
 bollard = "0.15.0"
 anyhow = "1.0.79"
+futures-util = "0.3.30"

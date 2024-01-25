@@ -2,6 +2,7 @@ use anyhow::Context;
 use bollard::container::{Config, CreateContainerOptions, StartContainerOptions};
 use bollard::models::{HealthConfig, HealthStatusEnum, HostConfig, PortBinding, PortMap};
 use bollard::Docker;
+use futures_util::StreamExt;
 use std::collections::HashMap;
 
 /// Launch a named Postgres 14 container.
@@ -13,6 +14,19 @@ pub async fn launch_postgres_container(
     cli: Docker,
     container_name: &str,
 ) -> Result<(), anyhow::Error> {
+    println!("Downloading Postgres image.");
+    let image = "postgres:14";
+    let mut download_stream = cli.create_image(
+        Some(bollard::image::CreateImageOptions {
+            from_image: image,
+            ..Default::default()
+        }),
+        None,
+        None,
+    );
+    while let Some(c) = download_stream.next().await {
+        c?;
+    }
     match cli
         .create_container(
             Some(CreateContainerOptions {
@@ -20,7 +34,7 @@ pub async fn launch_postgres_container(
                 ..Default::default()
             }),
             Config {
-                image: Some("postgres:14"),
+                image: Some(image),
                 exposed_ports: Some({
                     let mut ports = HashMap::new();
                     ports.insert("5432/tcp", HashMap::new());
