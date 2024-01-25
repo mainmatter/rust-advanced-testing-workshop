@@ -1,0 +1,8 @@
+[package]
+name = "googletest_custom_matcher"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+http = "1"
+googletest = { workspace = true }

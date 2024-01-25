@@ -1,0 +1,7 @@
+tests:
+  - name: "panics_if_config_is_empty"
+    expected_outcome: "success"
+  - name: "panics_if_config_contains_invalid_utf8"
+    expected_outcome: "success"
+  - name: "happy_path"
+    expected_outcome: "success"

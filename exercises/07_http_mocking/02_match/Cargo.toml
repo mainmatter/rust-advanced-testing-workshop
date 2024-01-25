@@ -1,0 +1,13 @@
+[package]
+name = "wiremock_match"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+serde_json = { workspace = true }
+wiremock = { workspace = true }
+
+[dev-dependencies]
+googletest = { workspace = true }
+tokio = { workspace = true }
+reqwest = { workspace = true }

@@ -1,0 +1,10 @@
+tests:
+  - name: "failure"
+    expected_outcome: "failure"
+    expected_output: |-
+      Value of: StatusCode::OK
+      Expected: is a redirection status code
+      Actual: 200,
+        which isn't a redirection status code
+  - name: "success"
+    expected_outcome: "success"

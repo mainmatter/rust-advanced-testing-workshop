@@ -1,0 +1,3 @@
+tests:
+  - name: "errors_if_tag_is_not_valid_semver_version"
+    expected_outcome: "success"

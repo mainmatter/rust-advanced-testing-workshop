@@ -1,0 +1,15 @@
+tests:
+  - name: "failed_is_b"
+    expected_outcome: "failure"
+    expected_output: |-
+      Value of: x
+      Expected: is MyCustomEnum::B(_)
+      Actual: A,
+        which is not MyCustomEnum::B(_)
+  - name: "failed_is_c"
+    expected_outcome: "failure"
+    expected_output: |-
+      Value of: x
+      Expected: is MyCustomEnum::C { .. }
+      Actual: B(10),
+        which is not MyCustomEnum::C { .. }

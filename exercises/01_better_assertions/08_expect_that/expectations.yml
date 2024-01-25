@@ -1,0 +1,34 @@
+tests:
+  - name: "multi_matcher"
+    expected_outcome: "failure"
+    expected_output: |-
+      Value of: v
+      Expected: only contains elements that is less than 3
+      Actual: [1, 2, 3],
+        whose element #2 is 3, which is greater than or equal to 3
+      Value of: v
+      Expected: only contains elements that is greater than 1
+      Actual: [1, 2, 3],
+        whose element #0 is 1, which is less than or equal to 1
+  - name: "multi_property"
+    expected_outcome: "failure"
+    expected_output: |-
+      Value of: person.surname
+      Expected: isn't equal to ""
+      Actual: "",
+        which is equal to ""
+      Value of: person.age
+      Expected: is greater than or equal to 18
+      Actual: 16,
+        which is less than 18
+  - name: "barrier"
+    expected_outcome: "failure"
+    expected_output: |-
+      Value of: v
+      Expected: only contains elements that is less than 3
+      Actual: [1, 2, 3],
+        whose element #2 is 3, which is greater than or equal to 3
+      Value of: v
+      Expected: only contains elements that is greater than 1
+      Actual: [1, 2, 3],
+        whose element #0 is 1, which is less than or equal to 1

@@ -1,0 +1,29 @@
+tests:
+  - name: "failed_is_none"
+    expected_outcome: "failure"
+    expected_output: |-
+      Value of: x
+      Expected: is none
+      Actual: Some(1),
+        which is some(_)
+  - name: "failed_is_some"
+    expected_outcome: "failure"
+    expected_output: |-
+      Value of: x
+      Expected: has a value which is anything
+      Actual: None,
+        which is None
+  - name: "failed_is_ok"
+    expected_outcome: "failure"
+    expected_output: |-
+      Value of: x
+      Expected: is a success containing a value, which is anything
+      Actual: Err("Something went wrong"),
+        which is an error
+  - name: "failed_is_err"
+    expected_outcome: "failure"
+    expected_output: |-
+      Value of: x
+      Expected: is an error which is anything
+      Actual: Ok(42),
+        which is a success

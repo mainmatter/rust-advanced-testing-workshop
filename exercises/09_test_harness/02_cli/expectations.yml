@@ -1,0 +1,9 @@
+tests:
+  - name: "happy_test"
+    expected_outcome: "success"
+  - name: "sad_test"
+    expected_outcome: "failure"
+    expected_output: |-
+      Error: "test panicked: assertion `left == right` failed
+        left: 2
+       right: 1"

@@ -1,0 +1,9 @@
+[package]
+name = "snapshot_redactions"
+version = "0.1.0"
+edition = "2021"
+
+[dev-dependencies]
+insta = { workspace = true, features = ["json", "redactions"] }
+serde_json = { workspace = true }
+time = { version = "0.3.31", features = ["formatting", "parsing"] }

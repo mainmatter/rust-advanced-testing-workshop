@@ -1,0 +1,15 @@
+[package]
+name = "sqlx_setup"
+version = "0.1.0"
+edition = "2021"
+
+[dev-dependencies]
+sqlx = { workspace = true }
+tokio = { workspace = true }
+googletest = { workspace = true }
+dotenvy = "0.15.7"
+
+[build-dependencies]
+sqlx = { workspace = true }
+tokio = { workspace = true }
+dotenvy = "0.15.7"

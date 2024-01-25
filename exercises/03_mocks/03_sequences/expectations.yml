@@ -1,0 +1,5 @@
+tests:
+  - name: "it_retries_if_first_call_fails"
+    expected_outcome: "success"
+  - name: "it_does_max_retries_if_all_calls_fail"
+    expected_outcome: "success"

@@ -1,0 +1,11 @@
+[package]
+name = "with_mimic"
+version = "0.1.0"
+edition = "2021"
+
+[[test]]
+name = "exercise"
+harness = false
+
+[dev-dependencies]
+libtest-mimic = { workspace = true }

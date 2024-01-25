@@ -1,0 +1,9 @@
+tests:
+  - name: "panics_if_file_does_not_exist"
+    expected_outcome: "success"
+  - name: "panics_if_file_is_empty"
+    expected_outcome: "success"
+  - name: "panics_if_file_contains_invalid_utf8"
+    expected_outcome: "success"
+  - name: "happy_path"
+    expected_outcome: "success"

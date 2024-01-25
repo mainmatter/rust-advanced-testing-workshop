@@ -1,0 +1,3 @@
+tests:
+  - name: "happy_path"
+    expected_outcome: "success"

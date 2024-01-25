@@ -1,0 +1,17 @@
+tests:
+  - name: "is_empty"
+    expected_outcome: "success"
+  - name: "one_value"
+    expected_outcome: "failure"
+    expected_output: |-
+      Value of: v
+      Expected: is empty
+      Actual: [-1],
+        which isn't empty
+  - name: "two_values"
+    expected_outcome: "failure"
+    expected_output: |-
+      Value of: v
+      Expected: is empty
+      Actual: [-1, 1],
+        which isn't empty

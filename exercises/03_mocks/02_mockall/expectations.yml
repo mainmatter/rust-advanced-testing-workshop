@@ -1,0 +1,3 @@
+tests:
+  - name: "square_works"
+    expected_outcome: "success"

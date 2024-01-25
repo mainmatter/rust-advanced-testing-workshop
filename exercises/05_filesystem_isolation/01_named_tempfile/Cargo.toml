@@ -1,0 +1,8 @@
+[package]
+name = "tempfile_intro"
+version = "0.1.0"
+edition = "2021"
+
+[dev-dependencies]
+tempfile = { workspace = true }
+googletest = { workspace = true }

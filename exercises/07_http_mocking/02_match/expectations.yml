@@ -1,0 +1,11 @@
+tests:
+  - name: "errors_on_invalid_json"
+    expected_outcome: "success"
+  - name: "errors_on_missing_content_type"
+    expected_outcome: "success"
+  - name: "errors_on_invalid_content_length"
+    expected_outcome: "success"
+  - name: "errors_on_non_post"
+    expected_outcome: "success"
+  - name: "happy_path"
+    expected_outcome: "success"

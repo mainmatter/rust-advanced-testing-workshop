@@ -1,0 +1,7 @@
+tests:
+  - name: "with_test"
+    expected_outcome: "success"
+  - name: "with_fq_test"
+    expected_outcome: "success"
+  - name: "without_test"
+    expected_outcome: "success"

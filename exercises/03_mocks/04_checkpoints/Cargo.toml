@@ -1,0 +1,10 @@
+[package]
+name = "mockall_checkpoint"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+mockall = { workspace = true }
+
+[dev-dependencies]
+googletest  = { workspace = true }

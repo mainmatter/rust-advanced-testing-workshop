@@ -1,0 +1,3 @@
+tests:
+  - name: "unchanged"
+    expected_outcome: "success"

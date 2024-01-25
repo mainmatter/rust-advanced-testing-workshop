@@ -1,0 +1,3 @@
+tests:
+  - name: "insert"
+    expected_outcome: "success"

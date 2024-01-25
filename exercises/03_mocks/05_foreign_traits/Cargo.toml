@@ -1,0 +1,10 @@
+[package]
+name = "mockall_foreign"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+mockall = { workspace = true }
+
+[dev-dependencies]
+static_assertions = "1.1.0"

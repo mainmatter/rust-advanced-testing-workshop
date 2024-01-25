@@ -1,0 +1,3 @@
+tests:
+  - name: "implements"
+    expected_outcome: "success"

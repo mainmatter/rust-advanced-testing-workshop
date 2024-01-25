@@ -1,0 +1,9 @@
+tests:
+  - name: "empty"
+    expected_outcome: "success"
+  - name: "one_value"
+    expected_outcome: "failure"
+    expected_output: "The vector is not empty, it has 1 elements"
+  - name: "two_values"
+    expected_outcome: "failure"
+    expected_output: "The vector is not empty, it has 2 elements"

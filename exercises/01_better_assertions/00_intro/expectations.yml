@@ -1,0 +1,7 @@
+tests:
+  - name: "assertion_with_message"
+    expected_outcome: "failure"
+    expected_output: |-
+      assertion `left == right` failed: The Rust compiler hasn't read 1984 by George Orwell.
+        left: 4
+       right: 5

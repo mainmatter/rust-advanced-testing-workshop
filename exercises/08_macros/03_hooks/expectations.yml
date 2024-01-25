@@ -1,0 +1,9 @@
+tests:
+  - name: "panic_before"
+    expected_outcome: "failure"
+    expected_output: "panic #1"
+  - name: "panic_after"
+    expected_outcome: "failure"
+    expected_output: "panic #2"
+  - name: "happy"
+    expected_outcome: "success"

@@ -1,0 +1,8 @@
+[package]
+name = "hooks"
+version = "0.1.0"
+edition = "2021"
+
+[dev-dependencies]
+macros03 = { path = "macros03" }
+googletest = { workspace = true }
