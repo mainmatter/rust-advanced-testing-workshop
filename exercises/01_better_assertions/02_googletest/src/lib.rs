@@ -11,7 +11,7 @@ mod tests {
         let v: Vec<i32> = vec![];
         // The `assert_that!` macro is the equivalent of `assert!` from the standard library.
         // It takes two arguments: the value you want to assert on, and the **matcher** you want to use.
-        // You can find all the built-in matchers in the [`matchers`](https://docs.rs/googletest/0.10.0/googletest/index.html#available-matchers)
+        // You can find all the built-in matchers in the [`matchers`](https://docs.rs/googletest/0.11.0/googletest/index.html#available-matchers)
         // module of the `googletest` crate. Find the right one!
         assert_that!(v, todo!());
         // ☝️Assert it's empty

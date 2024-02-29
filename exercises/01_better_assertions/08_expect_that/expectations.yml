@@ -6,6 +6,7 @@ tests:
       Expected: only contains elements that is less than 3
       Actual: [1, 2, 3],
         whose element #2 is 3, which is greater than or equal to 3
+      
       Value of: v
       Expected: only contains elements that is greater than 1
       Actual: [1, 2, 3],
@@ -17,6 +18,7 @@ tests:
       Expected: isn't equal to ""
       Actual: "",
         which is equal to ""
+      
       Value of: person.age
       Expected: is greater than or equal to 18
       Actual: 16,
@@ -28,6 +30,7 @@ tests:
       Expected: only contains elements that is less than 3
       Actual: [1, 2, 3],
         whose element #2 is 3, which is greater than or equal to 3
+      
       Value of: v
       Expected: only contains elements that is greater than 1
       Actual: [1, 2, 3],
