@@ -1,7 +1,7 @@
 #[cfg(test)]
 mod tests {
-    use googletest::matchers::{each, empty, eq, ge, gt, lt, not};
-    use googletest::{all, assert_that, expect_that, verify_current_test_outcome};
+    use googletest::matchers::{all, each, empty, eq, ge, gt, lt, not};
+    use googletest::{assert_that, expect_that, verify_current_test_outcome};
 
     #[googletest::test]
     fn multi_matcher() {

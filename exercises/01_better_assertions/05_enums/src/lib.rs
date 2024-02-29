@@ -1,7 +1,7 @@
 #[cfg(test)]
 mod tests {
     use googletest::assert_that;
-    use googletest::matches_pattern;
+    use googletest::matchers::matches_pattern;
 
     #[derive(Debug)]
     enum MyCustomEnum {
