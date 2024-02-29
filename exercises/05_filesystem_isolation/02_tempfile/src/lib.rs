@@ -21,14 +21,14 @@ mod tests {
     use std::path::PathBuf;
     use tempfile::tempfile;
 
-    #[test]
+    #[googletest::test]
     #[should_panic(expected = "The config is empty")]
     fn panics_if_config_is_empty() {
         let mut config = BufReader::new(todo!());
         super::get_cli_path(&mut config);
     }
 
-    #[test]
+    #[googletest::test]
     #[should_panic(expected = "First line is not valid UTF-8")]
     fn panics_if_config_contains_invalid_utf8() {
         let invalid_utf8 = [0xFF];

@@ -21,7 +21,7 @@ mod tests {
     use std::path::PathBuf;
     use tempfile::NamedTempFile;
 
-    #[test]
+    #[googletest::test]
     // Tip: you can use `expected` to specify a value that must be **contained** in the panic message!
     #[should_panic(expected = "Failed to open config file")]
     fn panics_if_file_does_not_exist() {
@@ -30,14 +30,14 @@ mod tests {
         super::get_cli_path(&config_path);
     }
 
-    #[test]
+    #[googletest::test]
     #[should_panic(expected = "The config file is empty")]
     fn panics_if_file_is_empty() {
         let config_file = todo!();
         super::get_cli_path(config_file.path());
     }
 
-    #[test]
+    #[googletest::test]
     #[should_panic(expected = "First line is not valid UTF-8")]
     fn panics_if_file_contains_invalid_utf8() {
         let invalid_utf8 = [0xFF];
