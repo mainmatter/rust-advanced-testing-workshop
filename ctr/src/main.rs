@@ -135,7 +135,7 @@ fn entrypoint() -> Result<(), anyhow::Error> {
 /// We then return a `test name -> test outcome` mapping.
 fn run_tests() -> Result<HashMap<String, TestOutcome>, anyhow::Error> {
     static THREAD_PANIC: Lazy<regex::Regex> = Lazy::new(|| {
-        regex::Regex::new(r#"thread \'[a-zA-Z0-9\:\-\_]+\' panicked at [a-zA-Z0-9\-\_\/\.]+\:(?<row>\d+)\:(?<column>\d+)"#)
+        regex::Regex::new(r#"thread \'[a-zA-Z0-9\:\-\_]+\' panicked at [a-zA-Z0-9\-\\\_\/\.]+\:(?<row>\d+)\:(?<column>\d+)"#)
             .expect("Failed to compile regex")
     });
     static MISSING_NIGHTLY: Lazy<regex::Regex> = Lazy::new(|| {
