@@ -5,6 +5,6 @@ edition = "2021"
 
 [dependencies]
 tokio = { workspace = true }
-bollard = "0.15.0"
+bollard = "0.16.1"
 anyhow = "1.0.79"
 futures-util = "0.3.30"

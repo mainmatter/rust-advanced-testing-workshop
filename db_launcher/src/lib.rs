@@ -58,6 +58,7 @@ pub async fn launch_postgres_container(
                     timeout: Some(5000000000),
                     retries: Some(5),
                     start_period: Some(1000000000),
+                    start_interval: None,
                 }),
                 env: Some(vec![
                     "POSTGRES_PASSWORD=password",
