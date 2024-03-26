@@ -46,8 +46,8 @@ enum GetReleaseError {
 #[cfg(test)]
 mod tests {
     use crate::GetReleaseError;
-    use googletest::matchers::err;
-    use googletest::{assert_that, pat};
+    use googletest::matchers::{err, pat};
+    use googletest::assert_that;
 
     #[googletest::test]
     #[tokio::test]
