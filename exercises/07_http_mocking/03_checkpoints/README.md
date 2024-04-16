@@ -9,7 +9,8 @@ of the test.
 
 - [`MockServer::verify`](https://docs.rs/wiremock/latest/wiremock/struct.MockServer.html#method.verify) verifies
   that all the expectations have been satisfied. It panics if they haven't.
-- Scoped mocks, via [`MockServer::register_scoped`](https://docs.rs/wiremock/latest/wiremock/struct.MockServer.html#method.register_scoped).
+- Scoped mocks,
+  via [`MockServer::register_as_scoped`](https://docs.rs/wiremock/latest/wiremock/struct.MockServer.html#method.register_as_scoped).
 
 `verify` is self-explanatory, so let's dive into scoped mocks.
 
@@ -17,7 +18,8 @@ of the test.
 
 When you register a mock with `MockServer::register`, it will be active until the `MockServer` instance goes out of
 scope.  
-`MockServer::register_scoped`, instead, returns a [`MockGuard`](https://docs.rs/wiremock/latest/wiremock/struct.MockGuard.html).  
+`MockServer::register_scoped`, instead, returns
+a [`MockGuard`](https://docs.rs/wiremock/latest/wiremock/struct.MockGuard.html).  
 The mock will be active until the guard is alive. When the guard goes out of scope, the mock will be removed from the
 `MockServer` instance and its expectations will be verified.
 
