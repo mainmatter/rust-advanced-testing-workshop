@@ -5,7 +5,6 @@ members = [
     "exercises/08_macros/02_test/macros02",
     "exercises/08_macros/03_hooks/macros03",
     "ctr",
-    "db_launcher"
 ]
 resolver = "2"
 
