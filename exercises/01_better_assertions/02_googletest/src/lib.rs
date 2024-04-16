@@ -2,8 +2,10 @@
 mod tests {
     use googletest::assert_that;
 
-    // The default `#[test]` attribute is not enough if you want to use
-    // `googletest`'s macros and matchers. You need to use `#[googletest::test]` instead.
+    // The default `#[test]` attribute is not enough if you want to use some of
+    // `googletest`'s macros (e.g. `expect_that!`). You need to use `#[googletest::test]` instead.
+    // Our recommendation: if you're using `googletest`, default to using `#[googletest::test]`
+    // rather than `#[test]`.
     //
     // You'll learn how to write a custom test macro later in the workshop!
     #[googletest::test]
@@ -17,13 +19,13 @@ mod tests {
         // ☝️Assert it's empty
     }
 
-    #[test]
+    #[googletest::test]
     fn one_value() {
         let v: Vec<i32> = vec![-1];
         // Assert it's empty
     }
 
-    #[test]
+    #[googletest::test]
     fn two_values() {
         let v: Vec<i32> = vec![-1, 1];
         // Assert it's empty
