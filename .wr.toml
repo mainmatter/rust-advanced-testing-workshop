@@ -1,1 +1,2 @@
-verification_command = "ctr"
+[[verification]]
+command = "ctr"
