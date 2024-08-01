@@ -1,3 +1,4 @@
+//! Use [`tempfile::NamedTempFile`] to fill in the blanks in the tests.
 use std::io::{BufRead, BufReader};
 use std::path::{Path, PathBuf};
 

@@ -1,3 +1,11 @@
+//! The test is divided in two logical parts:
+//!
+//! - A setup phase, where we initialise the object under test
+//! - An action phase, where we exercise the behaviour we want to test
+//!
+//! It is currently failing since a mock that's needed for the setup phase has leaked into the action phase.\
+//! Refactor the test to use scoped mocks for the setup phase: this ensures that no mocks are left active at the end of
+//! the setup phase, polluting the setup of the action phase.
 use reqwest::{Client, Url};
 
 pub struct Repository {

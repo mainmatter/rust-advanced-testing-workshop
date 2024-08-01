@@ -1,3 +1,5 @@
+//! Before digging any deeper, let's get familiar with the basics of `googletest` by rewriting the tests
+//! from the previous exercise.
 #[cfg(test)]
 mod tests {
     use googletest::assert_that;

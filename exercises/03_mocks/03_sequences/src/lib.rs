@@ -1,3 +1,4 @@
+//! Configure the mocks to get tests to pass.
 use mockall::automock;
 use std::error::Error;
 

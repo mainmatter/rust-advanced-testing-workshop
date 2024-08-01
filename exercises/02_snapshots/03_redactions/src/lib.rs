@@ -1,3 +1,5 @@
+//! Introduce a redaction in the test in this exercise to replace the timestamp with a `[timestamp]` placeholder.
+//! Do **not** update the saved snapshot.
 #[cfg(test)]
 mod tests {
     use insta::assert_json_snapshot;

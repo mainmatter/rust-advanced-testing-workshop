@@ -1,3 +1,5 @@
+//! Use `mockall` to mock the `Logger` trait in the `square` function.\
+//! Use the generated mock in the test.
 pub fn square<L>(x: i32, logger: L) -> i32
 where
     L: Logger,

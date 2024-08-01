@@ -1,3 +1,7 @@
+//! # Hints
+//!
+//! - Parse the `item` token stream into an `ItemFn` AST node using `syn`
+//! - Check `quote`'s documentation to learn its macro syntax
 use proc_macro::TokenStream;
 use quote::ToTokens;
 use syn::{Attribute, ItemFn};

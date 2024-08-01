@@ -1,3 +1,7 @@
+//! Replace the `assert_eq!`/`assert_ne!` calls with the corresponding `googletest` matchers.
+//!
+//! Take a moment to read the error messages and compare them with the ones you got from `assert_eq!`/`assert_ne!`.
+//! Notice how `googletest` sees through variable names and prints the actual values that were compared!
 #[cfg(test)]
 mod tests {
     use googletest::assert_that;

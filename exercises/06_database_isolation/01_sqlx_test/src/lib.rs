@@ -1,3 +1,7 @@
+//! The `insert` test should succeed the first time you run it, but fail the second time since the `users` table already
+//! exists and it already contains a row with the same `id`, thus violating the `PRIMARY KEY` constraint.
+//!
+//! Rewrite the test using the `#[sqlx::test]` attribute.
 #[cfg(test)]
 mod tests {
     use googletest::assert_that;

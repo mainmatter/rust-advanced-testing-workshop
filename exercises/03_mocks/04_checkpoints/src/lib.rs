@@ -1,3 +1,6 @@
+//! A loose expectation is causing the test to fail.\
+//! Refactor the test in such a way that the issue is reported closer to the source of the problem, then
+//! get the test to pass.
 use mockall::automock;
 use std::collections::HashSet;
 use std::error::Error;

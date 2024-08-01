@@ -1,3 +1,4 @@
+//! Use `tempfile::TempDir` to fill in the blanks in the tests.
 use cargo_manifest::Manifest;
 use std::io::BufRead;
 use std::path::Path;

@@ -1,3 +1,4 @@
+//! Write a custom `is_redirect` matcher that checks if a `StatusCode` is a redirect.
 use googletest::matcher::Matcher;
 use http::StatusCode;
 

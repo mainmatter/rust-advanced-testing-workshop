@@ -1,3 +1,5 @@
+//! Refactor the `get_latest_release` function to take the base URL as an argument.\
+//! Then modify the test to use `wiremock` to mock the GitHub API and return the expected response.
 use anyhow::Context;
 use reqwest::header::{CONTENT_TYPE, USER_AGENT};
 use reqwest::Client;
@@ -46,8 +48,8 @@ enum GetReleaseError {
 #[cfg(test)]
 mod tests {
     use crate::GetReleaseError;
-    use googletest::matchers::{err, pat};
     use googletest::assert_that;
+    use googletest::matchers::{err, pat};
 
     #[googletest::test]
     #[tokio::test]

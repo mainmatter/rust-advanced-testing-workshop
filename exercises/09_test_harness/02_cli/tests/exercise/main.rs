@@ -1,3 +1,5 @@
+//! Use `libtest_mimic::run` to implement a test runner that matches `cargo test`'s behaviour.
+//! Make sure to register all tests in your test suite, and to return the correct exit code.
 use libtest_mimic::{Failed, Trial};
 
 mod tests;

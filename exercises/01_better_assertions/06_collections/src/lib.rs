@@ -1,3 +1,4 @@
+//! Replace the `assert!` calls with the corresponding `googletest` matchers.
 #[cfg(test)]
 mod tests {
     use googletest::assert_that;

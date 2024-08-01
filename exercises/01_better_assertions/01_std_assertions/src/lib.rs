@@ -1,3 +1,7 @@
+//! Before we move on to more advanced assertion libraries, we want to make sure that you know
+//! how to get the most out of the built-in testing toolkit.
+//! In this exercise, you'll need to write a custom _dynamic_ panic message: the message must be
+//! different depending on the values of the variables you're comparing.
 #[cfg(test)]
 mod tests {
     #[test]

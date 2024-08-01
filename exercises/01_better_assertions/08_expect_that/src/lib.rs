@@ -1,3 +1,4 @@
+//! Use `expect_that!` to simplify `assert_that!` invocations and to check multiple properties on the same object.
 #[cfg(test)]
 mod tests {
     use googletest::matchers::{all, each, empty, eq, ge, gt, lt, not};

@@ -4,5 +4,5 @@ version = "0.1.0"
 edition = "2021"
 
 [dev-dependencies]
-macros02 = { path = "macros02" }
 googletest = { workspace = true }
+macros02 = { path = "macros02" }

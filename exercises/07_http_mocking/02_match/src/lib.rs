@@ -1,3 +1,9 @@
+//! Write a custom matcher that matches if:
+//!
+//! - The method is `POST`
+//! - The `Content-Type` header is present and set to `application/json`
+//! - The request body is a valid JSON object
+//! - The `Content-Length` header is set and its value matches the length of the request body (in bytes)
 use wiremock::{Match, Request};
 
 struct WellFormedJson;

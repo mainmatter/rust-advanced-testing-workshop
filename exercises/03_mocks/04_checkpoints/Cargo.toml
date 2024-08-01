@@ -7,4 +7,4 @@ edition = "2021"
 mockall = { workspace = true }
 
 [dev-dependencies]
-googletest  = { workspace = true }
+googletest = { workspace = true }

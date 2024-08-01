@@ -1,3 +1,5 @@
+//! Run the test in this exercise with `wr`: it should fail.
+//! Then use `cargo insta review` to review the changes and update the snapshots.
 #[cfg(test)]
 mod tests {
     use insta::assert_snapshot;
