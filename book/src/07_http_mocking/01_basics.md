@@ -1,7 +1,7 @@
 # `wiremock`
 
 The [`wiremock` crate](https://crates.io/crates/wiremock) is a loose port of the well-known
-[WireMock](http://wiremock.org/) library from Java.
+[WireMock](https://wiremock.org/) library from Java.
 
 ## How does it work?
 

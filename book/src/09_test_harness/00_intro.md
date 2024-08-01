@@ -1,6 +1,6 @@
 # Test harnesses
 
-In the [interlude](../../04_interlude/README.md) we had a first look under the hood
+In the [interlude](../04_interlude/00_testing_infrastructure) we had a first look under the hood
 of `cargo test`. In particular, you learned how tests are grouped into executables and
 reflected on the implications.
 
