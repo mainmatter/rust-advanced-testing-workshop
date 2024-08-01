@@ -1,0 +1,3 @@
+[[verification]]
+command = "cargo"
+args = ["test"]
