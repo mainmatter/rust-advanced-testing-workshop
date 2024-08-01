@@ -1,10 +1,10 @@
 [workspace]
 members = [
-    "ctr",
-    "exercises/*/*",
-    "exercises/08_macros/01_no_op_macro/macros01",
-    "exercises/08_macros/02_test/macros02",
-    "exercises/08_macros/03_hooks/macros03",
+  "ctr",
+  "exercises/*/*",
+  "exercises/08_macros/01_no_op_macro/macros01",
+  "exercises/08_macros/02_test/macros02",
+  "exercises/08_macros/03_hooks/macros03",
 ]
 resolver = "2"
 
