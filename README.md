@@ -16,6 +16,11 @@ If you run into any issue with the assumed level of Rust knowledge, please ping 
 > Check out our [landing page](https://mainmatter.com/rust-consulting/) if you're looking for Rust consulting or
 > training!
 
+## Getting started
+
+Open [the companion book for this course](https://rust-exercises.com/advanced-testing/) in your browser.
+Follow the instructions there to get started.
+
 ## Requirements
 
 - **Rust** (follow instructions [here](https://www.rust-lang.org/tools/install)).\
@@ -26,40 +31,9 @@ If you run into any issue with the assumed level of Rust knowledge, please ping 
   You **must** have `rustup` installed (check with `rustup --version`).
 - _(Optional)_ An IDE with Rust autocompletion support.
   We recommend one of the following:
-  - [RustRover](https://www.jetbrains.com/rust/);
-  - [Visual Studio Code](https://code.visualstudio.com) with
-    the [`rust-analyzer`](https://marketplace.visualstudio.com/items?itemName=matklad.rust-analyzer) extension.
-
-## Getting started
-
-1. Clone this repository.
-2. Install the nightly toolchain: `rustup toolchain install nightly`
-3. From the top-level folder, run the following commands:
-   ```bash
-   # Our `workshop-runner` CLI, you will need it to work through the exercises. 
-   # You can run `wr --help` to check that everything is running properly
-   cargo install --locked workshop-runner
-   # `ctr` stands for Check Test Results and it'll be invoked by `wr` to verify 
-   # the outcomes of your test.
-   cargo install --path ctr
-
-   # Work on your solution in a branch. 
-   git checkout -b my-solution
-
-   # Get started!
-   wr
-   ```
-   Follow the instructions shown in the terminal to get started with the first exercise.
-
-Run this command from the top-level folder
-
-```bash
-wr
-```
-
-to verify your current solutions and move forward in the workshop.
-
-Enjoy!
+    - [RustRover](https://www.jetbrains.com/rust/);
+    - [Visual Studio Code](https://code.visualstudio.com) with
+      the [`rust-analyzer`](https://marketplace.visualstudio.com/items?itemName=matklad.rust-analyzer) extension.
 
 ## Solutions
 
