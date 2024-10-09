@@ -10,13 +10,13 @@ mod tests {
     fn insta_is_installed() {
         let output = std::process::Command::new("cargo")
             .arg("insta")
-            .arg("--version")
+            .arg("--help")
             .output()
             .expect("Failed to run `cargo insta --version`");
 
         assert!(
             output.status.success(),
-            "`cargo insta --version` failed:\n{}",
+            "`cargo insta --help` failed:\n{}",
             String::from_utf8_lossy(&output.stderr)
         );
     }
