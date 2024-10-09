@@ -32,7 +32,7 @@ out the validation.
 
 For that reason, we need to provide `sqlx` with a connection string to said database.\
 The common approach is to define a `.env` file in the root of the project: `sqlx` will automatically read it and
-use the value of the `DATABASE_URL` variable as the connection string. We'll stick to [this approach](../../../.env).
+use the value of the `DATABASE_URL` variable as the connection string. We'll stick to this approach.
 
 > `sqlx` exposes a few different macro variants, but we'll mostly be
 > using [`sqlx::query!`](https://docs.rs/sqlx/0.7.3/sqlx/macro.query.html).
