@@ -25,7 +25,7 @@ bring this course to your company, please [get in touch](https://mainmatter.com/
 You can also take the course on your own, but we recommend you find a friend or
 a mentor to help you along the way should you get stuck. You can
 also find solutions to all exercises in the
-[`solutions` branch of the GitHub repository](https://github.com/mainmatter/rust-python-interoperability/tree/solutions).
+[`solutions` branch of the GitHub repository](https://github.com/mainmatter/rust-advanced-testing-workshop/tree/solutions).
 
 ## Prerequisites
 
@@ -52,7 +52,7 @@ On the left side of the screen, you can see that the course is divided into sect
 To verify your understanding, each section is paired with an exercise that you need to solve.
 
 You can find the exercises in the
-[companion GitHub repository](https://github.com/mainmatter/rust-python-interoperability).\
+[companion GitHub repository](https://github.com/mainmatter/rust-advanced-testing-workshop).\
 Before starting the course, make sure to clone the repository to your local machine:
 
 ```bash
