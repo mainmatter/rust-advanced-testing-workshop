@@ -24,8 +24,6 @@ impl Logger for PrintlnLogger {
 #[cfg(test)]
 mod tests {
     use super::square;
-    use googletest::assert_that;
-    use googletest::matchers::eq;
 
     #[test]
     fn square_works() {
