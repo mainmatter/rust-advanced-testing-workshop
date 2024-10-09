@@ -44,14 +44,6 @@ You'll also need the `nightly` toolchain, so make sure to install it:
 rustup toolchain install nightly
 ```
 
-You also need to install `ctr` (**C**heck **T**est **R**esults), a little tool that will be invoked
-to verify the outcomes of your tests:
-
-```bash
-# Install `ctr` from the top-level folder of the repository
-cargo install --path ctr
-```
-
 Don't start the course until you have these tools installed and working.
 
 ## Structure
@@ -83,6 +75,14 @@ All exercises are located in the `exercises` folder.
 Each exercise is structured as a Rust package.
 The package contains the exercise itself, instructions on what to do (in `src/lib.rs`), and a mechanism to
 automatically verify your solution.
+
+You also need to install `ctr` (**C**heck **T**est **R**esults), a little tool that will be invoked
+to verify the outcomes of your tests:
+
+```bash
+# Install `ctr` from the top-level folder of the repository
+cargo install --path ctr
+```
 
 ### `wr`, the workshop runner
 
