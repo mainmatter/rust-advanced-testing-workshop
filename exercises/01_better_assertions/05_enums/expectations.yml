@@ -17,6 +17,6 @@ tests:
     expected_outcome: "failure"
     expected_output: |-
       Value of: x
-      Expected: is MyCustomEnum::C which has field `a`, which is equal to "hello"
+      Expected: is &MyCustomEnum::C which has field `a`, which is equal to "hello"
       Actual: B(10),
         which has the wrong enum variant `B`

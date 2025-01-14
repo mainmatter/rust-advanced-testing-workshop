@@ -7,7 +7,7 @@ mod tests {
     // so we use the `maplit` to fill the gap.
     use maplit::{btreeset, hashmap};
 
-    #[googletest::test]
+    #[googletest::gtest]
     fn failed_is_eq() {
         let x = vec![1, 2, 3];
         let y = vec![4, 2, 6];
@@ -16,27 +16,27 @@ mod tests {
         assert_eq!(x, y);
     }
 
-    #[googletest::test]
+    #[googletest::gtest]
     fn failed_contains() {
         let x = btreeset![1, 2, 3];
         let y = 7;
         assert!(x.contains(&y));
     }
 
-    #[googletest::test]
+    #[googletest::gtest]
     fn failed_subset_of() {
         let x = btreeset![1, 2, 3];
         let y = btreeset![3, 4];
         assert!(y.is_subset(&x));
     }
 
-    #[googletest::test]
+    #[googletest::gtest]
     fn failed_each() {
         let x = btreeset![1, 2, 3, 4];
         assert!(x.iter().all(|x| *x > 2));
     }
 
-    #[googletest::test]
+    #[googletest::gtest]
     fn successful_has_entry() {
         let x = hashmap!["a" => 1, "b" => 2];
         let y = "b";

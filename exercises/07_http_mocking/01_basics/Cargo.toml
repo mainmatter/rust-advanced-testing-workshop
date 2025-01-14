@@ -4,11 +4,11 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
-anyhow = "1.0.79"
+anyhow = "1.0.95"
 reqwest = { workspace = true }
-semver = "1.0.21"
+semver = "1.0.24"
 serde_json = { workspace = true }
-thiserror = "1.0.56"
+thiserror = "2.0.11"
 
 [dev-dependencies]
 googletest = { workspace = true }
