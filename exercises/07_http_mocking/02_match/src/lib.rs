@@ -30,7 +30,7 @@ mod tests {
         server
     }
 
-    #[googletest::test]
+    #[googletest::gtest]
     #[tokio::test]
     async fn errors_on_invalid_json() {
         let server = test_server().await;
@@ -50,7 +50,7 @@ mod tests {
         assert_that!(outcome.status().as_u16(), eq(404));
     }
 
-    #[googletest::test]
+    #[googletest::gtest]
     #[tokio::test]
     async fn errors_on_missing_content_type() {
         let server = test_server().await;
@@ -68,7 +68,7 @@ mod tests {
         assert_that!(outcome.status().as_u16(), eq(404));
     }
 
-    #[googletest::test]
+    #[googletest::gtest]
     #[tokio::test]
     async fn errors_on_invalid_content_length() {
         let server = test_server().await;
@@ -86,7 +86,7 @@ mod tests {
         assert_that!(outcome.status().as_u16(), eq(404));
     }
 
-    #[googletest::test]
+    #[googletest::gtest]
     #[tokio::test]
     async fn errors_on_non_post() {
         let server = test_server().await;
@@ -102,7 +102,7 @@ mod tests {
         assert_that!(outcome.status().as_u16(), eq(404));
     }
 
-    #[googletest::test]
+    #[googletest::gtest]
     #[tokio::test]
     async fn happy_path() {
         let server = test_server().await;

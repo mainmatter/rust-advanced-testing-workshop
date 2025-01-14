@@ -57,7 +57,7 @@ mod tests {
     use wiremock::matchers::{method, path};
     use wiremock::{Mock, MockServer, ResponseTemplate};
 
-    #[googletest::test]
+    #[googletest::gtest]
     #[tokio::test]
     async fn permissions_can_be_revoked() {
         // Arrange

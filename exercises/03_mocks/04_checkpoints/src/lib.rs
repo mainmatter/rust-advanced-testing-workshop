@@ -49,7 +49,7 @@ pub struct Entity;
 mod tests {
     use super::*;
 
-    #[googletest::test]
+    #[googletest::gtest]
     fn happy_path() {
         // Setup
         let entity_id: usize = 1;

@@ -10,7 +10,7 @@ You'll augment `#[vanilla_test]`:
 - If the annotated function has been annotated with `#[test]`, it should emit the code unchanged.
 - If the annotated function has not been annotated with `#[test]`, it should add `#[test]` to the function.
 
-This is how `#[googletest::test]` works, for example.
+This is how `#[googletest::gtest]` works, for example.
 
 ## The toolkit
 

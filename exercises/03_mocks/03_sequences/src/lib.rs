@@ -47,7 +47,7 @@ mod tests {
 
     static MAX_N_RETRIES: usize = 3;
 
-    #[googletest::test]
+    #[googletest::gtest]
     fn it_retries_if_first_call_fails() {
         let mut mock_client = MockClient::new();
         // TODO: setup mock_client to fail the first call and succeed the second
@@ -58,7 +58,7 @@ mod tests {
         expect_that!(n_retries, eq(1));
     }
 
-    #[googletest::test]
+    #[googletest::gtest]
     fn it_does_max_retries_if_all_calls_fail() {
         let mut mock_client = MockClient::new();
         // TODO: setup mock_client to fail all calls

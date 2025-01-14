@@ -1,7 +1,7 @@
 # Test macros
 
 In the previous sections you've had a chance to see quite a few "custom" test macros in action:
-`#[googletest::test]`, `#[tokio::test]`, `#[sqlx::test]`. Sometimes you even combined them, stacking them
+`#[googletest::gtest]`, `#[tokio::test]`, `#[sqlx::test]`. Sometimes you even combined them, stacking them
 on top of each other!
 
 In this section, you'll learn _why_ these macros exist and _how_ to build your own.

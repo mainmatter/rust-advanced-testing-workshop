@@ -51,7 +51,7 @@ mod tests {
     use googletest::assert_that;
     use googletest::matchers::{err, pat};
 
-    #[googletest::test]
+    #[googletest::gtest]
     #[tokio::test]
     async fn errors_if_tag_is_not_valid_semver_version() {
         // Arrange

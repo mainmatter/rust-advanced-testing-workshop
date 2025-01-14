@@ -31,13 +31,13 @@ mod tests {
     use std::path::{Path, PathBuf};
     use tempfile::TempDir;
 
-    #[googletest::test]
+    #[googletest::gtest]
     fn happy_path() {
         // Arrange
         let workspace_root = todo!();
         let workspace_root_path = todo!();
 
-        let workspace_manifest = Manifest {
+        let workspace_manifest: Manifest<(), ()> = Manifest {
             workspace: Some(Workspace {
                 members: vec!["api".to_string(), "helpers".to_string()],
                 ..Default::default()
@@ -63,11 +63,11 @@ mod tests {
         expect_that!(manifests, len(eq(2)));
     }
 
-    fn save_member_manifest(m: Manifest, workspace_root: &Path) {
+    fn save_member_manifest(m: Manifest<(), ()>, workspace_root: &Path) {
         todo!()
     }
 
-    fn save_workspace_manifest(m: Manifest, workspace_root: &Path) {
+    fn save_workspace_manifest(m: Manifest<(), ()>, workspace_root: &Path) {
         todo!()
     }
 }

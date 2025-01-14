@@ -2,7 +2,7 @@
 use googletest::matcher::Matcher;
 use http::StatusCode;
 
-pub fn is_redirect() -> impl Matcher<ActualT = StatusCode> {
+pub fn is_redirect() -> impl Matcher<StatusCode> {
     todo!()
 }
 
