@@ -1,2 +1,3 @@
 [[verification]]
-command = "ctr"
+command = "cargo"
+args = ["run", "--package", "ctr", "--bin", "ctr"]
