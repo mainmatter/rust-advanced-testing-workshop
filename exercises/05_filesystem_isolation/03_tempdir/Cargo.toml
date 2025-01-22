@@ -4,9 +4,8 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
-cargo-manifest = "0.19"
-cargo-util-schemas = "0.7.1"
-toml = "0.8.19"
+cargo-manifest = { workspace = true }
+toml = { workspace = true }
 
 [dev-dependencies]
 googletest = { workspace = true }
