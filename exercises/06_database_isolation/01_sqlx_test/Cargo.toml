@@ -4,7 +4,7 @@ version = "0.1.0"
 edition = "2021"
 
 [dev-dependencies]
-dotenvy = "0.15.7"
+dotenvy = { workspace = true }
 googletest = { workspace = true }
 sqlx = { workspace = true }
 tokio = { workspace = true }
@@ -12,4 +12,4 @@ tokio = { workspace = true }
 [build-dependencies]
 sqlx = { workspace = true }
 tokio = { workspace = true }
-dotenvy = "0.15.7"
+dotenvy = { workspace = true }
