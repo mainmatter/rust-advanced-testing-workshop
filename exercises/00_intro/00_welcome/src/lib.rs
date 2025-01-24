@@ -24,7 +24,7 @@ mod tests {
 
         assert!(
             output.status.success(),
-            "`rustup run nightly cargo --version` failed:\n{}",
+            "`rustup run nightly cargo --version` failed:\n\t{}\n\nTo fix the error, install the nightly toolchain on your machine:\n\n\n\trustup toolchain install nightly\n",
             String::from_utf8_lossy(&output.stderr)
         );
     }
