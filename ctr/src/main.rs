@@ -143,7 +143,7 @@ fn run_tests() -> Result<HashMap<String, TestOutcome>, anyhow::Error> {
             .expect("Failed to compile regex")
     });
     static GOOGLETEST_PANIC: Lazy<regex::Regex> = Lazy::new(|| {
-        regex::Regex::new(r#"\s*at [a-zA-Z0-9\-\\\_\/\.]+\:(?<row>\d+)\:(?<column>\d+)"#)
+        regex::Regex::new(r#"\s*at [a-zA-Z0-9\-\\\_\/\.\:]+\:(?<row>\d+)\:(?<column>\d+)"#)
             .expect("Failed to compile regex")
     });
 
