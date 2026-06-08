@@ -19,7 +19,7 @@ docker run -p 5432:5432 \
   -e POSTGRES_USER=postgres \
   -e POSTGRES_DB=postgres \
   --name test_db \
-  postgres:15
+  postgres:18
 ```
 
 ## Configuring `sqlx`
