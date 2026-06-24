@@ -78,7 +78,8 @@ mod tests {
 
         let outcome = client
             .post(&server.uri())
-            .header("Content-Length", length)
+            .header("Content-Length", length - 1)
+            .header("Content-Type", "application/json")
             .body(body)
             .send()
             .await
